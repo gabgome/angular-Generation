@@ -9,7 +9,8 @@ export class FeedComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {
+    window.scroll(0, 0) /*Os parâmetros representam x e y*/
+  } /*Quando iniciar o componente feed, a página deve ser exibida a partir do topo (começo da página)*/
 
 }
