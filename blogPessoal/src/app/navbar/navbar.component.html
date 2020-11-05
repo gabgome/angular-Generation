@@ -13,13 +13,29 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/feed'>Feed</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/login'>Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/cadastro'>Cadastro</a>
-                </li>
+                </li> 
+                <!--Recebe o retorno de 'auth'-->
+                <!--Se o token for 'true' mostra o botão Login, se não for, não mostra-->
+                <div *ngIf='auth.btnLogin()'>
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/login'>Login</a>
+                    </li>
+                </div>
+                <!--Se o token for 'true' não mostra o botão Cadastro, se não for, mostra-->
+                <div *ngIf='auth.btnLogin()'>
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/cadastro'>Cadastro</a>
+                    </li>
+                </div>
+                <!--Se o token for 'true' mostra o botão Sair, se nao for, não mostra-->
+                <div *ngIf='auth.btnSair()'>
+                    <li class="nav-item">
+                        <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" (click)='sair()'>Sair</a>
+                    </li>
+                </div>
+               
+
+                
             </ul>
         </div>
     </nav>

@@ -18,4 +18,26 @@ export class AuthService {
   cadastrar(user: User) {
     return this.http.post('http://localhost:8080/usuarios/cadastrar', user)
   }
+
+  btnSair() {
+    let ok = false
+    let token = localStorage.getItem('token') //Traz o token recebido pelo 'localStorage' no console
+    //Se o token não for nulo, ok recebe 'true' (verdadeiro)... se for nulo, ok continua como 'false' (falso)
+    if(token != null){
+      ok = true
+    }
+
+    return ok
+  }
+
+  btnLogin() {
+    let ok = false
+    let token = localStorage.getItem('token') 
+    //Se o token for nulo, ok recebe 'true' (verdadeiro)... se não for nulo, ok continua como 'false' (falso)
+    if(token == null){
+      ok = true
+    }
+
+    return ok
+  }
 }
