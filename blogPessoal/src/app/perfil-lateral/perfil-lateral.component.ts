@@ -14,5 +14,4 @@ export class PerfilLateralComponent implements OnInit {
     
 
   }
-
 }
