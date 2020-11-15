@@ -29,10 +29,14 @@ ul.social-network {
   color: #C13584;
   }
   
+  footer {
+    background-image: linear-gradient(#BF349A, #8C3086, #6B2F73)
+  }
+  /*
   .page-footer {
     background-color: #8C3086;
   }
 
   .footer-copyright {
     background-color: #5F3073;
-  }
+  } */

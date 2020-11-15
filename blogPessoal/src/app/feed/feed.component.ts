@@ -34,6 +34,14 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    /*Recebe o token do localStorage*/
+    let token = localStorage.getItem('token')
+
+    if(token === null){
+      this.router.navigate(['/login'])
+      this.alert.showAlertInfo('Faça o login antes de entrar no feed')
+    }
+
     /*Os parâmetros representam x e y. Quando iniciar o componente feed, a página deve ser exibida a partir 
     do topo (começo da página)*/
     window.scroll(0, 0) 

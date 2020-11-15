@@ -7,3 +7,9 @@
 a {
     cursor: pointer;
 }
+
+a:hover {
+    background-color: #F28888;
+    border-radius: 10px;
+    
+}
