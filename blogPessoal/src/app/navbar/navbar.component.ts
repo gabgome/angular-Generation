@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -14,11 +15,11 @@ export class NavbarComponent implements OnInit {
     public auth: AuthService //O estado da variável deve ser 'public' para que o template tenha acesso
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
   sair() {
     this.router.navigate(['/login'])
-    localStorage.clear()
+    environment.token = ''
   }
 }

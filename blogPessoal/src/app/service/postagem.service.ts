@@ -1,8 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 
-@Injectable({
+@Injectable({ 
   providedIn: 'root'
 })
 export class PostagemService {
@@ -10,7 +11,7 @@ export class PostagemService {
   constructor(private http: HttpClient) { }
   //Autoriza o usuário a fazer requisições
   token = {
-    headers: new HttpHeaders().set('Authorization', localStorage.getItem('token'))
+    headers: new HttpHeaders().set('Authorization', environment.token)
   }
 
   //Método que retorna todas as postagens cadastradas

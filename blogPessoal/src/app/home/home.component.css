@@ -1,5 +1,9 @@
+.container, .btn {
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
 .parallax {
-    background-image: url('https://i.imgur.com/vtsvxoh.jpg');
+    background-image: url('https://i.imgur.com/wnLYPEe.jpg');
 
     min-height: 500px;
 
@@ -7,6 +11,9 @@
     background-position: center;
     background-repeat: none;
     background-size: cover;
-
-
 }
+
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+

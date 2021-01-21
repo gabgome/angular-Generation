@@ -1,15 +1,10 @@
 .texto {
     letter-spacing: .2rem; /*Altera o espaçamento entre as letras*/
+    font-style: bold;
     font-size: 16pt;
 }
 
 /*Faz com que o cursor modifique para 'mãozinha' quando estiver em cima de um link*/
 a {
     cursor: pointer;
-}
-
-a:hover {
-    background-color: #F28888;
-    border-radius: 10px;
-    
 }

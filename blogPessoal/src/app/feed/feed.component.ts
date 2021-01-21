@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
 import { Tema } from '../model/Tema';
 import { AlertasService } from '../service/alertas.service';
@@ -34,10 +35,10 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /*Recebe o token do localStorage*/
-    let token = localStorage.getItem('token')
+    /*Recebe o token de forma interna através do 'environment'*/
+    let token = environment.token
 
-    if(token === null){
+    if(token === ''){
       this.router.navigate(['/login'])
       this.alert.showAlertInfo('Faça o login antes de entrar no feed')
     }

@@ -1,7 +1,12 @@
+<!--Fonte personalizada-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+<!--/Fonte personalizada-->
+
 <div class="container">
   <div class="row mt-5 mb-5">
     <div class="col-md-12">
-      <h1 class="text-center">Cadastrar</h1>
+      <h1 class="text-center text-uppercase font-weight-bold">Cadastrar</h1>
     </div>
   </div>
   <div class="row mb-5 d-flex justify-content-center">
@@ -24,7 +29,7 @@
 
         <div class="form-group">
           <label for="senhaConf">Confirmar Senha</label>
-          <input type="password" class="form-control" id="senhaConf" placeholder="Digite a confirmação de senha" (input)='conferirSenha($event)' value='{{senha}}'>
+          <input type="password" class="form-control" id="senhaConf" placeholder="Digite a senha novamente" (input)='conferirSenha($event)' value='{{senha}}'>
         </div>
 
         <div class="d-flex justify-content-center">

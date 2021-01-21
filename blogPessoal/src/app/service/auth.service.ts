@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { User } from '../model/User';
 import { UserLogin } from '../model/UserLogin';
 
@@ -21,9 +22,9 @@ export class AuthService {
 
   btnSair() {
     let ok = false
-    let token = localStorage.getItem('token') //Traz o token recebido pelo 'localStorage' no console
+    let token = environment.token
     //Se o token não for nulo, ok recebe 'true' (verdadeiro)... se for nulo, ok continua como 'false' (falso)
-    if(token != null){
+    if(token != ''){
       ok = true
     }
 
@@ -32,9 +33,9 @@ export class AuthService {
 
   btnLogin() {
     let ok = false
-    let token = localStorage.getItem('token') 
+    let token = environment.token 
     //Se o token for nulo, ok recebe 'true' (verdadeiro)... se não for nulo, ok continua como 'false' (falso)
-    if(token == null){
+    if(token == ''){
       ok = true
     }
 
