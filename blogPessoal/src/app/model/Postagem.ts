@@ -8,4 +8,3 @@ export class Postagem {
     public tema: Tema 
 }
 
-//Tema não é um array. O relacionamento entre as tabelas foi de N-1 (uma postagem tem um tema e um tema tem várias postagens)

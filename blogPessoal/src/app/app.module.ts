@@ -46,7 +46,7 @@ import { AlertasComponent } from './alertas/alertas.component';
     HttpClientModule,
     FormsModule,
     OrderModule,
-    ModalModule.forRoot() //Permite importar o modalModule para qualquer componente
+    ModalModule.forRoot() 
   ],
   providers: [],
   bootstrap: [AppComponent]

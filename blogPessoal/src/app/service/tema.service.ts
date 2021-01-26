@@ -14,7 +14,7 @@ export class TemaService {
     headers: new HttpHeaders().set('Authorization', environment.token)
   }
   //Método que retorna todos os temas cadastrados
-  getAllTemas () {
+  getAllTemas() {
     return this.http.get('http://localhost:8080/tema', this.token)
   }
   //Método que busca um tema através do id

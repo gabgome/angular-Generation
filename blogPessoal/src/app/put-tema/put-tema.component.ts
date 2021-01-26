@@ -41,5 +41,4 @@ export class PutTemaComponent implements OnInit {
       this.alert.showAlertSuccess('Tema atualizado com sucesso!')
     })
   }
-
 }

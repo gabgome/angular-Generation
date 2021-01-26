@@ -26,7 +26,7 @@
                         <a class="nav-link texto text-uppercase p-3" routerLink='/cadastro'>Cadastro</a>
                     </li>
                 </div>
-                <!--Se o token for 'true' mostra o botão Sair, se nao for, não mostra-->
+                <!--Se o token for 'true' mostra o botão Sair, se não for, não mostra-->
                 <div *ngIf='auth.btnSair()'>
                     <li class="nav-item">
                         <a class="nav-link texto text-uppercase p-3" (click)='sair()'>Sair</a>
@@ -36,4 +36,4 @@
         </div>
     </nav>
 </div>
-<!-- routerLink é um atributo da tag <a> que só funciona no Angular-->
+

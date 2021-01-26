@@ -1,7 +1,7 @@
-import { Postagem } from './Postagem' //Array de postagens da model 
+import { Postagem } from './Postagem'
 
 export class Tema {
-    public id: number //Todo tipo que for número (long, bigint, int...) é declarado como 'number' no TypeScript
+    public id: number
     public descricao: string
-    public postagem: Postagem[] //Chave estrangeira de Postagem. Por ser uma lista, declaramos como um array []
+    public postagem: Postagem[]
 }

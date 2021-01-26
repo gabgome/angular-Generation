@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public auth: AuthService //O estado da variável deve ser 'public' para que o template tenha acesso
+    public auth: AuthService 
   ) { }
 
   ngOnInit() {

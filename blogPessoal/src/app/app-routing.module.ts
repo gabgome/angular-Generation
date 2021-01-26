@@ -10,16 +10,15 @@ import { DeletePostagemComponent } from './delete-postagem/delete-postagem.compo
 import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
-/*path - nome da rota*/
 const routes: Routes = [
-  { path:'', redirectTo: 'home', pathMatch: 'full' }, /*Quando a rota estiver vazia, redireciona para a Home*/
-  { path: 'home', component: HomeComponent }, /*Direciona para a página home*/
-  { path: 'feed', component: FeedComponent }, /*Direciona para a página feed*/
+  { path:'', redirectTo: 'home', pathMatch: 'full' }, 
+  { path: 'home', component: HomeComponent }, 
+  { path: 'feed', component: FeedComponent }, 
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'cadastro-tema', component: PostTemaComponent },
-  { path: 'editar-post/:id', component: PutPostagemComponent }, /*Recebe o id como parâmetro para poder editar através dele*/
-  { path: 'delete-post/:id', component: DeletePostagemComponent }, /*Deleta através do id*/
+  { path: 'editar-post/:id', component: PutPostagemComponent }, 
+  { path: 'delete-post/:id', component: DeletePostagemComponent }, 
   { path: 'editar-tema/:id', component: PutTemaComponent },
   { path: 'delete-tema/:id', component: DeleteTemaComponent }
 

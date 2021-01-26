@@ -15,7 +15,7 @@ import { TemaService } from '../service/tema.service';
 export class FeedComponent implements OnInit {
 
   key = 'data'
-  reverse = true  /*Faz com que o último item do array vá para o início da fila*/
+  reverse = true  
   
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
@@ -26,7 +26,7 @@ export class FeedComponent implements OnInit {
   idTema: number
   nomeTema: string
 
-  /*Injeção de dependências do 'service'*/
+  /*Injeção de dependências*/
   constructor(
     private postagemService: PostagemService,
     private temaService: TemaService,
@@ -35,7 +35,6 @@ export class FeedComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    /*Recebe o token de forma interna através do 'environment'*/
     let token = environment.token
 
     if(token === ''){
@@ -43,8 +42,6 @@ export class FeedComponent implements OnInit {
       this.alert.showAlertInfo('Faça o login antes de entrar no feed')
     }
 
-    /*Os parâmetros representam x e y. Quando iniciar o componente feed, a página deve ser exibida a partir 
-    do topo (começo da página)*/
     window.scroll(0, 0) 
     /*Trás os métodos automaticamente assim que a página é renderizada (exibe o conteúdo na tela do navegador) se tiver um token*/
     this.findAllPostagens()
@@ -52,9 +49,6 @@ export class FeedComponent implements OnInit {
 
   } 
 
-  /*Descrição: chama no 'service' o método, transforma o JSON recebido em um objeto através do 'subscribe' 
-  e insere na variável criada 'listaPostagens'. No 'postagem.service' é feito o contato com o back-end através do link do 'localhost'
-  inserindo um 'token' para permitir o acesso do usuário logado a qualquer endpoint*/
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
@@ -73,13 +67,11 @@ export class FeedComponent implements OnInit {
           this.postagem = resp
           this.postagem = new Postagem()
           this.alert.showAlertSuccess ('Postagem realizada com sucesso!')
-          this.findAllPostagens() /*Lista novamente as postagens depois de publicar uma nova*/
+          this.findAllPostagens() 
       })
     }
   }
 
-  /*Busca por todos os temas: recebe um array (lista) de todos os temas cadastrados. 
-  O mesmo acontece com o método de Postagens*/
   findAllTemas() {
     this.temaService.getAllTemas().subscribe((resp: Tema[]) => {
       this.listaTemas = resp
@@ -111,8 +103,4 @@ export class FeedComponent implements OnInit {
       })
     }
   }
-
-
-
-
 }

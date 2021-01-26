@@ -41,5 +41,4 @@ export class PostagemService {
   getByTituloPostagem(titulo: string) {
     return this.http.get(`http://localhost:8080/postagens/titulo/${titulo}`, this.token)
   }
-  
 }

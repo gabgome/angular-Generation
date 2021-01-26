@@ -1,10 +1,9 @@
 .texto {
-    letter-spacing: .2rem; /*Altera o espaçamento entre as letras*/
+    letter-spacing: .2rem; 
     font-style: bold;
     font-size: 16pt;
 }
 
-/*Faz com que o cursor modifique para 'mãozinha' quando estiver em cima de um link*/
 a {
     cursor: pointer;
 }
