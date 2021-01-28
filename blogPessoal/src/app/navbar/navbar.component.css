@@ -1,3 +1,7 @@
+* {
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
 .texto {
     letter-spacing: .2rem; 
     font-style: bold;
@@ -7,3 +11,4 @@
 a {
     cursor: pointer;
 }
+

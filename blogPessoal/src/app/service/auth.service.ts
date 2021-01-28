@@ -12,7 +12,7 @@ export class AuthService {
 
   //Método de login do usuário - importando do component UserLogin 
   logar(userLogin: UserLogin) {
-    return this.http.post('http://localhost:8080/usuarios/logar', userLogin)
+    return this.http.post('https://localhost:8080/usuarios/logar', userLogin)
   }
   //Método de cadastrar usuário - importando do component Usuario
   cadastrar(user: Usuario) {
